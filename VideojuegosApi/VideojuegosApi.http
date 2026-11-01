@@ -1,0 +1,42 @@
+@host = http://localhost:5181
+
+GET {{host}}/api/productos
+Accept: application/json
+
+###
+
+GET {{host}}/api/productos/1
+
+###
+
+GET {{host}}/api/productos/buscar?texto=zelda
+
+###
+
+POST {{host}}/api/productos
+Content-Type: application/json
+
+{
+  "titulo": "Hollow Knight",
+  "plataforma": "PC",
+  "genero": "Metroidvania",
+  "precio": 299.00,
+  "fechaLanzamiento": "2017-02-24"
+}
+
+###
+
+PUT {{host}}/api/productos/1
+Content-Type: application/json
+
+{
+  "titulo": "The Legend of Zelda: Tears of the Kingdom",
+  "plataforma": "Nintendo Switch",
+  "genero": "Aventura",
+  "precio": 1199.00,
+  "fechaLanzamiento": "2023-05-12"
+}
+
+###
+
+DELETE {{host}}/api/productos/4
